@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 import {
   CheckCircle,
   CloudCog,
@@ -233,15 +234,14 @@ export default function COMMUSLandingPage() {
       {/* ================= ARCHITECTURE ================= */}
       <section id="architecture" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-          <img
-            src="/architecture.svg"
-            alt="COMMUS Architecture Diagram"
-            className="w-full md:w-1/2 rounded-lg shadow-lg"
-            onError={(e) => {
-              e.currentTarget.src =
-                "https://via.placeholder.com/600x400.png?text=Architecture+Diagram+Coming+Soon";
-            }}
-          />
+          <Image
+			  src="/architecture_placeholder.png"
+			  width={600}
+			  height={400}
+			  alt="Architecture Diagram Coming Soon"
+			  className="rounded-xl shadow-lg"
+			  priority
+			/>
           <ul className="md:w-1/2 space-y-4 text-gray-700">
             <li className="flex gap-3 items-start">
               <CheckCircle className="text-blue-700 mt-1" /> Pre-receive hook intercepts push and
