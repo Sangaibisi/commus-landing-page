@@ -1,9 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Check, Users, ShieldCheck, CloudCog } from "lucide-react";
-import { motion } from "framer-motion";
 
-export default function CommusLandingPage() {
+export default function COMMUSLandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-50 text-gray-900">
       <header className="text-center py-16 px-4">
@@ -17,45 +14,39 @@ export default function CommusLandingPage() {
       </header>
 
       <section className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto px-4 py-8">
-        <Card className="shadow-xl">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-              <ShieldCheck className="text-blue-600" /> Vision & Purpose
-            </h2>
-            <p>
-              COMMUS helps large-scale development and QA teams replace fragile verbal coordination
-              with system-enforced rules, enhancing delivery reliability and reducing risk.
-            </p>
-          </CardContent>
-        </Card>
+        <div className="bg-white rounded-xl shadow-lg p-6">
+          <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+            <ShieldCheck className="text-blue-600" /> Vision & Purpose
+          </h2>
+          <p>
+            COMMUS helps large-scale development and QA teams replace fragile verbal coordination
+            with system-enforced rules, enhancing delivery reliability and reducing risk.
+          </p>
+        </div>
 
-        <Card className="shadow-xl">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-              <Users className="text-blue-600" /> Target Audience
-            </h2>
-            <p>
-              COMMUS is designed for software development companies. Its users include developers,
-              QA engineers, test leads, and release coordinators.
-            </p>
-          </CardContent>
-        </Card>
+        <div className="bg-white rounded-xl shadow-lg p-6">
+          <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+            <Users className="text-blue-600" /> Target Audience
+          </h2>
+          <p>
+            COMMUS is designed for software development companies. Its users include developers,
+            QA engineers, test leads, and release coordinators.
+          </p>
+        </div>
 
-        <Card className="shadow-xl md:col-span-2">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-              <CloudCog className="text-blue-600" /> The Problem & Solution
-            </h2>
-            <p className="mb-4">
-              In projects with multiple environments (e.g., dev, test, prod), communication gaps often lead
-              to errors. QA teams can't prevent pushes mid-testing reliably.
-            </p>
-            <p>
-              COMMUS allows test leads to freeze branches through a web UI, enforced by pre-receive hooks
-              in Git — no more Slack messages like "please don’t push to test."
-            </p>
-          </CardContent>
-        </Card>
+        <div className="bg-white rounded-xl shadow-lg p-6 md:col-span-2">
+          <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+            <CloudCog className="text-blue-600" /> The Problem & Solution
+          </h2>
+          <p className="mb-4">
+            In projects with multiple environments (e.g., dev, test, prod), communication gaps often lead
+            to errors. QA teams can't prevent pushes mid-testing reliably.
+          </p>
+          <p>
+            COMMUS allows test leads to freeze branches through a web UI, enforced by pre-receive hooks
+            in Git — no more Slack messages like "please don’t push to test."
+          </p>
+        </div>
       </section>
 
       <section className="bg-white py-12 px-4">
