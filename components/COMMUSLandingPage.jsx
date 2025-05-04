@@ -231,37 +231,80 @@ export default function COMMUSLandingPage() {
       </section>
 
       {/* ================= ARCHITECTURE ================= */}
-      <section id="architecture" className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-          <img
-            src="/architecture.svg"
-            alt="COMMUS Architecture Diagram"
-            className="w-full md:w-1/2 rounded-lg shadow-lg"
-            onError={(e) => {
-              e.currentTarget.src =
-                "https://via.placeholder.com/600x400.png?text=Architecture+Diagram+Coming+Soon";
-            }}
-          />
-          <ul className="md:w-1/2 space-y-4 text-gray-700">
-            <li className="flex gap-3 items-start">
-              <CheckCircle className="text-blue-700 mt-1" /> Pre-receive hook intercepts push and
-              calls COMMUS API.
-            </li>
-            <li className="flex gap-3 items-start">
-              <CheckCircle className="text-blue-700 mt-1" /> Policy engine validates branch freeze
-              rules in real-time.
-            </li>
-            <li className="flex gap-3 items-start">
-              <CheckCircle className="text-blue-700 mt-1" /> Response blocks or allows the push
-              instantly.
-            </li>
-            <li className="flex gap-3 items-start">
-              <CheckCircle className="text-blue-700 mt-1" /> Dashboards and alerts keep teams
-              informed.
-            </li>
-          </ul>
-        </div>
-      </section>
+{/* ================= ARCHITECTURE ================= */}
+<section id="architecture" className="py-20 bg-white">
+  <style>{`
+    .flow-step{
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      width:140px;padding:20px 12px;background:#ffffff;border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,.08);
+    }
+    .flow-step h3{margin-top:6px;font-size:14px;font-weight:600;color:#1e3a8a;}
+    .flow-step p{margin-top:2px;font-size:12px;color:#475569;}
+    .flow-icon{font-size:26px;color:#2563eb;}
+    .flow-arrow svg{width:38px;height:38px;stroke:#2563eb;}
+  `}</style>
+
+  <h2 className="text-3xl md:text-4xl font-extrabold text-center text-blue-800 mb-12">
+    High-Level Flow
+  </h2>
+
+  {/* Responsive flow */}
+  <div className="flex flex-col md:flex-row items-center justify-center gap-6 max-w-6xl mx-auto px-4">
+    {/* Developer */}
+    <div className="flow-step">
+      <div className="flow-icon">💻</div>
+      <h3>Developer</h3>
+      <p>Git Client</p>
+    </div>
+
+    {/* Arrow */}
+    <div className="flow-arrow hidden md:block">
+      <svg fill="none" viewBox="0 0 24 24">
+        <path d="M4 12h16m0 0-5-5m5 5-5 5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+
+    {/* Git Repo */}
+    <div className="flow-step">
+      <div className="flow-icon">📦</div>
+      <h3>Git Repo</h3>
+      <p>Bitbucket / GitLab / GitHub</p>
+    </div>
+
+    {/* Arrow */}
+    <div className="flow-arrow hidden md:block">
+      <svg fill="none" viewBox="0 0 24 24">
+        <path d="M4 12h16m0 0-5-5m5 5-5 5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+
+    {/* Hook */}
+    <div className="flow-step">
+      <div className="flow-icon">🛡️</div>
+      <h3>Pre-receive Hook</h3>
+      <p>Intercepts Push</p>
+    </div>
+
+    {/* Arrow */}
+    <div className="flow-arrow hidden md:block">
+      <svg fill="none" viewBox="0 0 24 24">
+        <path d="M4 12h16m0 0-5-5m5 5-5 5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+
+    {/* COMMUS */}
+    <div className="flow-step">
+      <div className="flow-icon">⚙️</div>
+      <h3>COMMUS API</h3>
+      <p>Policy Engine</p>
+    </div>
+
+    {/* Arrow */}
+    <div className="flow-arrow hidden md:block">
+      <svg fill="none" viewBox="0 0 24 24">
+        <path d="M4
+
 
       {/* ================= CTA ================= */}
       <section id="cta" className="py-24 bg-blue-700 text-white text-center">
