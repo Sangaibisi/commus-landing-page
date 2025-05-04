@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <html lang="en" />
 		<title>COMMUS • Smart SDLC Coordination Platform</title>
         <meta name="description" content="COMMUS streamlines communication & coordination across large software teams." />
 
