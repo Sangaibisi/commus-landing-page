@@ -134,39 +134,27 @@ export default function COMMUSLandingPage() {
       </header>
 
       {/* ================= HERO ================= */}
-      <section className="relative h-screen overflow-hidden">
-        {/* Background Image */}
-        <Image
-          src="/hero-background.jpg"
-          alt="Hero Background"
-          layout="fill"
-          objectFit="cover"
-          className="-z-20"
-        />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-60 z-10" />
-
+      <section className="relative overflow-hidden">
         {/* Decorative blobs */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 0.15, scale: 1.2 }}
           transition={{ duration: 12, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute -top-40 -left-40 w-96 h-96 bg-blue-200 rounded-full blur-3xl z-15"
+          className="absolute -top-40 -left-40 w-96 h-96 bg-blue-200 rounded-full blur-3xl"
         />
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 0.1, scale: 1.3 }}
           transition={{ duration: 14, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute -bottom-40 -right-20 w-[28rem] h-[28rem] bg-blue-300 rounded-full blur-3xl z-15"
+          className="absolute -bottom-40 -right-20 w-[28rem] h-[28rem] bg-blue-300 rounded-full blur-3xl"
         />
 
-        {/* Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 py-24 text-center">
+        <div className="max-w-7xl mx-auto px-4 py-24 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-extrabold text-blue-100 drop-shadow-lg"
+            className="text-5xl md:text-6xl font-extrabold text-blue-800 drop-shadow"
           >
             Turn SDLC Friction <br className="hidden md:block" /> Into Flow 🚀
           </motion.h1>
@@ -174,7 +162,7 @@ export default function COMMUSLandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-white"
+            className="mt-6 text-lg md:text-xl max-w-2xl mx-auto"
           >
             COMMUS empowers QA and Dev teams with enforceable Git environment controls—no more
             fragile chat coordination.
@@ -182,7 +170,7 @@ export default function COMMUSLandingPage() {
           <motion.a
             href="#cta"
             whileHover={{ scale: 1.05 }}
-            className="inline-block mt-10 px-8 py-3 bg-blue-700 text-white rounded-full shadow-lg z-20"
+            className="inline-block mt-10 px-8 py-3 bg-blue-700 text-white rounded-full shadow-lg"
           >
             See It In Action
           </motion.a>
