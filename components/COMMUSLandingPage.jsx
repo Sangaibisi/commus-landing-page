@@ -231,37 +231,76 @@ export default function COMMUSLandingPage() {
         </div>
       </section>
 
-      {/* ================= ARCHITECTURE ================= */}
-      <section id="architecture" className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-          <Image
-			  src="/architecture_placeholder.png"
-			  width={600}
-			  height={400}
-			  alt="Architecture Diagram Coming Soon"
-			  className="rounded-xl shadow-lg"
-			  priority
-			/>
-          <ul className="md:w-1/2 space-y-4 text-gray-700">
-            <li className="flex gap-3 items-start">
-              <CheckCircle className="text-blue-700 mt-1" /> Pre-receive hook intercepts push and
-              calls COMMUS API.
-            </li>
-            <li className="flex gap-3 items-start">
-              <CheckCircle className="text-blue-700 mt-1" /> Policy engine validates branch freeze
-              rules in real-time.
-            </li>
-            <li className="flex gap-3 items-start">
-              <CheckCircle className="text-blue-700 mt-1" /> Response blocks or allows the push
-              instantly.
-            </li>
-            <li className="flex gap-3 items-start">
-              <CheckCircle className="text-blue-700 mt-1" /> Dashboards and alerts keep teams
-              informed.
-            </li>
-          </ul>
-        </div>
-      </section>
+		{/* ================= ARCHITECTURE ================= */}
+		<section id="architecture" className="py-20 bg-white">
+		  <div className="max-w-6xl mx-auto px-4 text-center">
+			<h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-12">
+			  Inside the COMMUS Engine
+			</h2>
+			<div className="grid md:grid-cols-2 gap-10 text-left">
+			  {/* Box 1 */}
+			  <div className="flex items-start gap-4">
+				<div className="text-blue-700 mt-1">
+				  <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+					<path d="M3 3v18h18" />
+				  </svg>
+				</div>
+				<div>
+				  <h3 className="text-xl font-semibold text-gray-800">Git Hook Interceptor</h3>
+				  <p className="mt-2 text-gray-600">
+					COMMUS integrates at the Git level via pre‑receive hooks to intercept every push before it hits your repository.
+				  </p>
+				</div>
+			  </div>
+
+			  {/* Box 2 */}
+			  <div className="flex items-start gap-4">
+				<div className="text-blue-700 mt-1">
+				  <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+					<path d="M9 12h6M9 16h6M5 8h14" />
+				  </svg>
+				</div>
+				<div>
+				  <h3 className="text-xl font-semibold text-gray-800">Rule-Based Policy Engine</h3>
+				  <p className="mt-2 text-gray-600">
+					Flexible branch freezing rules enforced in real-time—no need for manual coordination.
+				  </p>
+				</div>
+			  </div>
+
+			  {/* Box 3 */}
+			  <div className="flex items-start gap-4">
+				<div className="text-blue-700 mt-1">
+				  <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+					<path d="M4 6h16M4 12h16M4 18h16" />
+				  </svg>
+				</div>
+				<div>
+				  <h3 className="text-xl font-semibold text-gray-800">Automated CI/CD Integration</h3>
+				  <p className="mt-2 text-gray-600">
+					Freeze or unfreeze environments based on signals from Jenkins, GitHub Actions, GitLab CI, and more.
+				  </p>
+				</div>
+			  </div>
+
+			  {/* Box 4 */}
+			  <div className="flex items-start gap-4">
+				<div className="text-blue-700 mt-1">
+				  <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+					<path d="M3 3h18v18H3V3z" />
+				  </svg>
+				</div>
+				<div>
+				  <h3 className="text-xl font-semibold text-gray-800">Dashboards & Alerts</h3>
+				  <p className="mt-2 text-gray-600">
+					Visualize environment health and freeze status in real time with Slack & Teams alerts.
+				  </p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</section>
+
 
       {/* ================= CTA ================= */}
       <section id="cta" className="py-24 bg-blue-700 text-white text-center">
