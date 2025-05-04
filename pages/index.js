@@ -1,6 +1,5 @@
 import Head from "next/head";
 import COMMUSLandingPage from "../components/COMMUSLandingPage";
-import "../styles/globals.css";
 
 export default function Home() {
   return (
