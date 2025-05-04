@@ -1,36 +1,44 @@
 import Head from 'next/head';
+import COMMUSLandingPage from '../components/COMMUSLandingPage';
 
 export default function Home() {
   return (
     <>
+      {/* SEO & metadata */}
       <Head>
-		<title>COMMUS • Smart SDLC Coordination Platform</title>
-        <meta name="description" content="COMMUS streamlines communication & coordination across large software teams." />
+        <title>COMMUS • Smart SDLC Coordination Platform</title>
+        <meta
+          name="description"
+          content="COMMUS streamlines communication & coordination across large software teams."
+        />
 
-        {/* Open Graph */}
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://commus.io/" />
         <meta property="og:title" content="COMMUS" />
-        <meta property="og:description" content="Platform for zero‑touch coordination in SDLC." />
+        <meta
+          property="og:description"
+          content="Platform for zero-touch coordination in SDLC."
+        />
         <meta property="og:image" content="/og-image.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="COMMUS" />
-        <meta name="twitter:description" content="Platform for zero‑touch coordination in SDLC." />
+        <meta
+          name="twitter:description"
+          content="Platform for zero-touch coordination in SDLC."
+        />
         <meta name="twitter:image" content="/og-image.png" />
 
-        {/* Canonical */}
+        {/* Canonical + viewport + favicon */}
         <link rel="canonical" href="https://commus.io/" />
-
-        {/* Viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen flex items-center justify-center">
-        <h1 className="text-4xl font-bold">COMMUS Landing Page</h1>
-      </main>
+      {/* Landing page UI */}
+      <COMMUSLandingPage />
     </>
   );
 }
