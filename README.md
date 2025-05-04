@@ -1,3 +1,10 @@
+![Vercel](https://vercelbadge.vercel.app/api/Sangaibisi/commus-landing-page)
+![License](https://img.shields.io/github/license/Sangaibisi/commus-landing-page)
+![Last Commit](https://img.shields.io/github/last-commit/Sangaibisi/commus-landing-page)
+
+![Open issues](https://img.shields.io/github/issues/Sangaibisi/commus-landing-page)
+![Pull Requests](https://img.shields.io/github/issues-pr/Sangaibisi/commus-landing-page)
+
 # COMMUS – Smart SDLC Coordination Platform
 
 ![COMMUS banner](./public/architecture_pro.svg)
